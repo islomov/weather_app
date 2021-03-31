@@ -1,0 +1,22 @@
+apply from: file("$rootDir/libraries.gradle")
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation google.appCompat
+    implementation google.dagger
+    implementation google.daggerAndroid
+    implementation google.daggerAndroidSupport
+    implementation google.fragment
+    implementation kotlin.jdk7
+    implementation reactive.android
+    implementation reactive.java
+    implementation reactive.kotlin
+
+    kapt google.daggerCompiler
+    kapt google.daggerAndroidAnnotationProcessor
+
+    androidTestImplementation google.testJunit
+    androidTestImplementation google.testEspresso
+
+}
